@@ -1,5 +1,6 @@
 build/bin
 node_modules
-frontend/dist**/.idea/*
+frontend/dist
+**/.idea/*
 build/*
 **/node_modules/*

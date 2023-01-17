@@ -1,4 +1,4 @@
-module changeme
+module docklister
 
 go 1.18
 
