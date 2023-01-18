@@ -15,7 +15,14 @@ window.listImages = function () {
     try {
         ListImages()
             .then((result) => {
-                imagesElement.innerText = result
+                let images = result.map(image => image.RepoTags)
+                images = images.filter( image => image != ['<none>:<none>'] )
+
+                for (var i=0; i<images.length; i++) {
+                    images[i] = `<div> ${images[i]} </div>`
+                }
+
+                imagesElement.innerHTML = images.join("<br>")
             })
             .catch((err) => {
                 console.error(err);
